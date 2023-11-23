@@ -1,9 +1,10 @@
 function isPalindrome(string) {
+    const formattedString = string.toLowerCase().replace(/[^a-z0-9]/g, '');
     let reversedString = "";
-    for (let i = 1; i <= string.length; i++) {
-        reversedString += string[string.length - i]
+    for (let i = 1; i <= formattedString.length; i++) {
+        reversedString += formattedString[formattedString.length - i]
     }
-    if (string.toLowerCase() === reversedString.toLowerCase()) {
+    if (formattedString === reversedString) {
         return true;
     } else {
         return false
